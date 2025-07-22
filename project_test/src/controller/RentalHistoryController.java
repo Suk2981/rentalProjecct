@@ -267,7 +267,7 @@ public class RentalHistoryController implements Initializable {
 	// ========== 내비게이션 메서드 (기존과 동일, 변경 없음) ==========
 	public void handleEqList(ActionEvent event) {
 		try {
-			Parent mainView = FXMLLoader.load(getClass().getResource("/view/mainView.fxml"));
+			Parent mainView = FXMLLoader.load(getClass().getResource("/view/MainView.fxml"));
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(mainView));
 			stage.setTitle("MainView");
@@ -279,7 +279,7 @@ public class RentalHistoryController implements Initializable {
 
 	public void handleMyInfo(ActionEvent event) {
 		try {
-			Parent myInfoView = FXMLLoader.load(getClass().getResource("/view/my_info.fxml"));
+			Parent myInfoView = FXMLLoader.load(getClass().getResource("/view/MyInfoView.fxml"));
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(myInfoView));
 			stage.setTitle("내 정보");
