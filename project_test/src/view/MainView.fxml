@@ -99,7 +99,7 @@
             text="장비 설명" />
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button onAction="#RentButton" layoutX="33.0" layoutY="32.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="201.0" text="대여하기" />
+                  <Button onAction="#rentButton" layoutX="33.0" layoutY="32.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="201.0" text="대여하기" />
                </children>
             </Pane>
          </children>
