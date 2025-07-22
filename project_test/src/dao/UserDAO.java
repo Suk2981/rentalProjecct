@@ -118,7 +118,7 @@ public class UserDAO {
 
 	// 사용자 ID 조회
 	public Long getUserIdByLoginID(String loginId) {
-		String sql = "{ call get_user_id_by_login_id(?, ?) }";
+		String sql = "{ call sp_get_user_id_by_login_id(?, ?) }";
 		try (Connection conn = getConnection(); CallableStatement cs = conn.prepareCall(sql)) {
 
 			cs.setString(1, loginId);
