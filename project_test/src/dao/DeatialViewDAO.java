@@ -11,7 +11,7 @@ import util.DBUtil;
 public class DeatialViewDAO {
 	public DetailViewDTO getEachEquipmentDetail(String serialNum) {
 		DetailViewDTO dto = new DetailViewDTO();
-	    String sql = "{ call get_each_equipment_info(?, ?, ?, ?, ?, ?, ?, ?, ?) }";
+	    String sql = "{ call sp_get_each_equipment_info(?, ?, ?, ?, ?, ?, ?, ?, ?) }";
 
 	    try (Connection conn = DBUtil.getConnection();
 	         CallableStatement cs = conn.prepareCall(sql)) {
