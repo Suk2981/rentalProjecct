@@ -104,7 +104,7 @@ public class RentalDAO {
     }
     
     public boolean insertRental(RentalDTO rental) {
-        String sql = "{ call insert_rental_proc(?, ?, ?, ?) }";
+        String sql = "{ call sp_insert_rental(?, ?, ?, ?) }";
 
         try (Connection conn = DBUtil.getConnection();
              CallableStatement cs = conn.prepareCall(sql)) {
