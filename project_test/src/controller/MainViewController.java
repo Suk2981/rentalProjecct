@@ -118,7 +118,7 @@ public class MainViewController {
 	private void handleMyInfo(ActionEvent event) {
 		try {
 			// FXML 로더를 사용하여 "내 정보 수정" FXML 로드
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/myInfoView.fxml")); // FXML 파일명 확인!
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MyInfoView.fxml")); // FXML 파일명 확인!
 			Parent myInfoView = loader.load();
 
 			// 1. 새로운 Stage (팝업 창) 생성
@@ -154,7 +154,7 @@ public class MainViewController {
 	public void handleRentalHistory(ActionEvent event) {
 		try {
 			// FXML 파일 로드 (패키지 경로 맞춰주세요!)
-			Parent handleRentalHistory = FXMLLoader.load(getClass().getResource("/view/rental_history.fxml"));
+			Parent handleRentalHistory = FXMLLoader.load(getClass().getResource("/view/RentalHistoryView.fxml"));
 
 			// 현재 창(Stage)을 얻어서 씬 변경
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -169,9 +169,11 @@ public class MainViewController {
 
 	// 대여하기 버튼
 	@FXML
-	private void RentButton() {
+	private void rentButton() {
+		System.out.println("대여 버튼 클릭");
 		EquipmentViewDTO selected = equipmentTable.getSelectionModel().getSelectedItem();
 		if (selected != null) {
+			System.out.println("대여 버튼 클릭");
 			openDetailView(selected);
 		}
 	}
@@ -218,7 +220,7 @@ public class MainViewController {
 	// 더블 클릭시 상세페이지 띄우기
 	private void openDetailView(EquipmentViewDTO equipment) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/detailView.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DetailView.fxml"));
 			Parent root = loader.load();
 
 			DetailViewController controller = loader.getController();
