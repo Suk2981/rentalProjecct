@@ -1,9 +1,3 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/README.md b/README.md
-index 8e049ed87be024e28c947504965244358fd9db1f..3135bc4dc2c14cdd868415d1401fb29fa64c11d4 100644
---- a/README.md
-+++ b/README.md
-@@ -1 +1,57 @@
 -# rentalProjecct
 +# rentalProjecct
 +
@@ -62,6 +56,3 @@ index 8e049ed87be024e28c947504965244358fd9db1f..3135bc4dc2c14cdd868415d1401fb29f
 +- Oracle JDBC 드라이버
 +- JavaFX SDK
 +
- 
-EOF
-)
